@@ -4,7 +4,43 @@ import "dotenv/config";
 import axios from "axios";
 import { MongoClient } from "mongodb";
 
+const PROFANITY_LIST = [
+  "shit",
+  "fuck",
+  "arse",
+  "wank",
+  "member",
+  "dick",
+  "balls",
+  "tit",
+  "tits",
+  "knob",
+];
+
 axios.defaults.baseURL = process.env.PRINTPUZ_SERVERLESS_URL;
+
+const incrementWordCount = (map, word) => {
+  const count = map.get(word) ?? 0;
+  map.set(word, count + 1);
+};
+
+const findProfanitiesInClues = (map, clues) => {
+  for (const clue of clues) {
+    for (const word of PROFANITY_LIST) {
+      if (clue.includes(word)) {
+        incrementWordCount(map, word);
+      }
+    }
+  }
+};
+
+const findProfanities = (map, parsedPuzzle) => {
+  const pluckClue = ({ clue }) => clue;
+  const acrossClues = parsedPuzzle.acrossClues.map(pluckClue);
+  const downClues = parsedPuzzle.downClues.map(pluckClue);
+  findProfanitiesInClues(map, acrossClues);
+  findProfanitiesInClues(map, downClues);
+};
 
 const main = async () => {
   let client;
@@ -24,12 +60,12 @@ const main = async () => {
     }
 
     const parsedPuzzlesCollection = db.collection("parsedPuzzles");
-    // const profanitiesCollection = db.collection("profanities");
+    const profanitiesCollection = db.collection("profanities");
 
     const listPuzzlesResponse = await axios.get("/list-puzzles");
     const puzzleUrls = listPuzzlesResponse.data.puzzles.map(({ url }) => url);
     console.log(`Number of puzzles found: ${puzzleUrls.length}`);
-    for await (const puzzleUrl of puzzleUrls.slice(0, 3)) {
+    for await (const puzzleUrl of puzzleUrls) {
       const config = {
         params: {
           puzzleUrl,
@@ -42,7 +78,12 @@ const main = async () => {
       await parsedPuzzlesCollection.insertOne(parsedPuzzle);
     }
 
-    // TODO: build a map of profanity words to word counts and store in a profanities collection
+    const allParsedPuzzles = await parsedPuzzlesCollection.find().toArray();
+    const map = new Map();
+    allParsedPuzzles.forEach((parsedPuzzle) => findProfanities(map, parsedPuzzle));
+    console.log(map);
+
+    await profanitiesCollection.insertOne({ wordsAndCounts: Array.from(map.entries()) });
 
     await client.close();
   } catch (error) {
