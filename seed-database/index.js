@@ -1,14 +1,21 @@
-import axios from "axios";
+/* eslint-env node */
 
-// See https://github.com/taylorjg/print-puz-serverless
-axios.defaults.baseURL = "https://fr0r2wv048.execute-api.us-east-1.amazonaws.com";
+import "dotenv/config";
+import axios from "axios";
+import { MongoClient } from "mongodb";
+
+axios.defaults.baseURL = process.env.PRINTPUZ_SERVERLESS_URL;
 
 const main = async () => {
   try {
+    const client = new MongoClient(process.env.MONGODB_URL);
+
     // TODO: ensure parsePuzzles collections exists and is empty
     // TODO: ensure profanities collections exists and is empty
+
     const listPuzzlesResponse = await axios.get("/list-puzzles");
     const puzzleUrls = listPuzzlesResponse.data.puzzles.map(({ url }) => url);
+    console.log(`Number of puzzles found: ${puzzleUrls.length}`);
     for await (const puzzleUrl of puzzleUrls.slice(0, 3)) {
       const config = {
         params: {
@@ -16,6 +23,7 @@ const main = async () => {
         },
       };
       const parsePuzzleResponse = await axios.get("/parse-puzzle", config);
+      console.log(`Parsing ${puzzleUrl}...`);
       const parsedPuzzle = parsePuzzleResponse.data;
       // TODO: add parsedPuzzle to parsedPuzzles collection
     }
