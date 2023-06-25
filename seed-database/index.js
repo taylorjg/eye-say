@@ -42,6 +42,12 @@ const findProfanities = (map, parsedPuzzle) => {
   findProfanitiesInClues(map, downClues);
 };
 
+const rebuildMap = async (profanitiesCollection) => {
+  const wordCounts = await profanitiesCollection.find().toArray();
+  const kvps = wordCounts.map(({ word, count }) => [word, count]);
+  return new Map(kvps);
+};
+
 const main = async () => {
   let client;
   try {
@@ -65,7 +71,7 @@ const main = async () => {
     const listPuzzlesResponse = await axios.get("/list-puzzles");
     const puzzleUrls = listPuzzlesResponse.data.puzzles.map(({ url }) => url);
     console.log(`Number of puzzles found: ${puzzleUrls.length}`);
-    for await (const puzzleUrl of puzzleUrls) {
+    for await (const puzzleUrl of puzzleUrls.slice(0, 5)) {
       const config = {
         params: {
           puzzleUrl,
@@ -83,7 +89,11 @@ const main = async () => {
     allParsedPuzzles.forEach((parsedPuzzle) => findProfanities(map, parsedPuzzle));
     console.log(map);
 
-    await profanitiesCollection.insertOne({ wordsAndCounts: Array.from(map.entries()) });
+    const wordCounts = Array.from(map.entries()).map(([word, count]) => ({ word, count }));
+    await profanitiesCollection.insertMany(wordCounts);
+
+    const rebuiltMap = await rebuildMap(profanitiesCollection);
+    console.log("rebuiltMap:", rebuiltMap);
 
     await client.close();
   } catch (error) {
