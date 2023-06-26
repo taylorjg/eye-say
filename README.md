@@ -1,6 +1,8 @@
 # Description
 
+
 :warning: Not for the easily offended! :warning:
+
 
 This is just a silly little project to count all the occurrences of rude words in all the available Private Eye crossword
 puzzle clues and then make a word cloud out of the data.
@@ -26,11 +28,15 @@ pattern of naming things `Eye` + `Something` e.g. `EyePlayer` and then converted
 
 If you like this sort of silliness, you might also enjoy the following:
 
+
 :warning: Not for the easily offended! :warning:
+
 
 * [Harold Pinter's Nursery Rhymes](https://www.private-eye.co.uk/eyeplayer/play/20)
 
+
 :warning: Not for the easily offended! :warning:
+
 
 # Links
 
