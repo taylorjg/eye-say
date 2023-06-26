@@ -1,5 +1,7 @@
 # Description
 
+:warning: Not for the easily offended! :warning:
+
 This is just a silly little project to count all the occurrences of rude words in all the available Private Eye crossword
 puzzle clues and then make a word cloud out of the data.
 
@@ -12,6 +14,23 @@ I am reusing some serverless functions that I created for a different purpose. T
 * Finally, I save the list of words & counts in a [JSON file](src/words.json)
 
 I then have a little React app that renders the word cloud using [@visx/wordcloud](https://airbnb.io/visx/docs/wordcloud).
+
+# App Name
+
+Why is it called `eye-say` ? It's a play on the expression, "I say!", but following the Private Eye
+pattern of naming things `Eye` + `Something` e.g. `EyePlayer` and then converted to follow normal package name conventions:
+
+> The "name" field contains your package's name, and must be lowercase and one word, and may contain hyphens and underscores.
+
+# See Also
+
+If you like this sort of silliness, you might also enjoy the following:
+
+:warning: Not for the easily offended! :warning:
+
+* [Harold Pinter's Nursery Rhymes](https://www.private-eye.co.uk/eyeplayer/play/20)
+
+:warning: Not for the easily offended! :warning:
 
 # Links
 
