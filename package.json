@@ -1,5 +1,6 @@
 {
   "name": "eye-say",
+  "description": "Make a word cloud out of all the rude words in Private Eye crossword puzzle clues",
   "private": true,
   "version": "0.0.2",
   "type": "module",
