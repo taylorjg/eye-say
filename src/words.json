@@ -1,179 +1,131 @@
 [
   {
     "text": "sex",
-    "value": 335
-  },
-  {
-    "text": "piss",
-    "value": 286
-  },
-  {
-    "text": "ass",
-    "value": 269
+    "value": 247
   },
   {
     "text": "arse",
-    "value": 252
-  },
-  {
-    "text": "tit",
-    "value": 167
-  },
-  {
-    "text": "balls",
-    "value": 142
+    "value": 151
   },
   {
     "text": "pissed",
     "value": 141
   },
   {
+    "text": "balls",
+    "value": 110
+  },
+  {
+    "text": "piss",
+    "value": 82
+  },
+  {
     "text": "shit",
-    "value": 94
-  },
-  {
-    "text": "shag",
-    "value": 88
-  },
-  {
-    "text": "crap",
-    "value": 83
+    "value": 77
   },
   {
     "text": "penis",
-    "value": 66
+    "value": 64
   },
   {
-    "text": "butt",
-    "value": 51
+    "text": "shag",
+    "value": 56
+  },
+  {
+    "text": "crap",
+    "value": 53
   },
   {
     "text": "screwing",
     "value": 49
   },
   {
-    "text": "bastard",
-    "value": 43
-  },
-  {
     "text": "tits",
-    "value": 42
+    "value": 44
   },
   {
-    "text": "bollock",
-    "value": 37
+    "text": "butt",
+    "value": 40
   },
   {
-    "text": "bum",
-    "value": 36
+    "text": "bastard",
+    "value": 35
   },
   {
     "text": "bloody",
-    "value": 31
+    "value": 30
   },
   {
-    "text": "bugger",
+    "text": "bum",
     "value": 28
   },
   {
-    "text": "pussy",
+    "text": "hell",
     "value": 27
-  },
-  {
-    "text": "orgasm",
-    "value": 25
-  },
-  {
-    "text": "cock",
-    "value": 25
-  },
-  {
-    "text": "tosser",
-    "value": 25
-  },
-  {
-    "text": "prick",
-    "value": 25
   },
   {
     "text": "ejaculation",
     "value": 25
   },
   {
-    "text": "hell",
-    "value": 24
+    "text": "pussy",
+    "value": 23
   },
   {
-    "text": "wank",
-    "value": 24
+    "text": "prick",
+    "value": 23
   },
   {
-    "text": "cum",
-    "value": 21
+    "text": "tit",
+    "value": 22
   },
   {
-    "text": "semen",
-    "value": 21
-  },
-  {
-    "text": "boob",
-    "value": 20
-  },
-  {
-    "text": "dick",
-    "value": 20
-  },
-  {
-    "text": "lust",
-    "value": 19
-  },
-  {
-    "text": "testicle",
+    "text": "orgasm",
     "value": 18
   },
   {
-    "text": "God",
-    "value": 18
-  },
-  {
-    "text": "shaggin",
-    "value": 15
+    "text": "tosser",
+    "value": 17
   },
   {
     "text": "shagging",
     "value": 15
   },
   {
-    "text": "nob",
+    "text": "dick",
     "value": 14
+  },
+  {
+    "text": "God",
+    "value": 12
+  },
+  {
+    "text": "boob",
+    "value": 12
+  },
+  {
+    "text": "bugger",
+    "value": 11
+  },
+  {
+    "text": "testicle",
+    "value": 11
   },
   {
     "text": "wanker",
-    "value": 14
+    "value": 11
   },
   {
-    "text": "asses",
-    "value": 13
-  },
-  {
-    "text": "spac",
-    "value": 13
-  },
-  {
-    "text": "cipa",
+    "text": "cock",
     "value": 10
   },
   {
-    "text": "pron",
+    "text": "semen",
     "value": 9
   },
   {
     "text": "boner",
     "value": 9
-  },
-  {
-    "text": "twat",
-    "value": 8
   },
   {
     "text": "boobs",
@@ -184,47 +136,27 @@
     "value": 8
   },
   {
-    "text": "blow job",
+    "text": "lust",
     "value": 7
   },
   {
-    "text": "turd",
+    "text": "ass",
     "value": 7
   },
   {
-    "text": "snatch",
-    "value": 7
-  },
-  {
-    "text": "anal",
-    "value": 7
-  },
-  {
-    "text": "hoar",
+    "text": "twat",
     "value": 6
   },
   {
     "text": "slut",
-    "value": 6
-  },
-  {
-    "text": "knob",
-    "value": 6
-  },
-  {
-    "text": "bitch",
     "value": 5
   },
   {
-    "text": "s hit",
+    "text": "turd",
     "value": 5
   },
   {
-    "text": "vagina",
-    "value": 5
-  },
-  {
-    "text": "hore",
+    "text": "anal",
     "value": 5
   },
   {
@@ -232,28 +164,16 @@
     "value": 5
   },
   {
-    "text": "porn",
+    "text": "wank",
     "value": 4
   },
   {
-    "text": "homo",
-    "value": 4
-  },
-  {
-    "text": "fag",
-    "value": 4
-  },
-  {
-    "text": "shagger",
+    "text": "knob",
     "value": 4
   },
   {
     "text": "shitty",
     "value": 4
-  },
-  {
-    "text": "porno",
-    "value": 3
   },
   {
     "text": "dyke",
@@ -268,28 +188,16 @@
     "value": 3
   },
   {
-    "text": "cums",
-    "value": 3
-  },
-  {
-    "text": "pube",
-    "value": 3
-  },
-  {
     "text": "anus",
-    "value": 3
-  },
-  {
-    "text": "whore",
-    "value": 3
-  },
-  {
-    "text": "pissin",
     "value": 3
   },
   {
     "text": "pissing",
     "value": 3
+  },
+  {
+    "text": "bitch",
+    "value": 2
   },
   {
     "text": "fellatio",
@@ -320,11 +228,15 @@
     "value": 2
   },
   {
-    "text": "titt",
+    "text": "fag",
     "value": 2
   },
   {
-    "text": "asshole",
+    "text": "vagina",
+    "value": 2
+  },
+  {
+    "text": "nob",
     "value": 2
   },
   {
@@ -340,6 +252,10 @@
     "value": 1
   },
   {
+    "text": "shagger",
+    "value": 1
+  },
+  {
     "text": "bitches",
     "value": 1
   },
@@ -349,6 +265,10 @@
   },
   {
     "text": "faggot",
+    "value": 1
+  },
+  {
+    "text": "porn",
     "value": 1
   },
   {
@@ -364,7 +284,19 @@
     "value": 1
   },
   {
+    "text": "sluts",
+    "value": 1
+  },
+  {
     "text": "titties",
+    "value": 1
+  },
+  {
+    "text": "asshole",
+    "value": 1
+  },
+  {
+    "text": "heshe",
     "value": 1
   },
   {
@@ -376,23 +308,11 @@
     "value": 1
   },
   {
-    "text": "muff",
+    "text": "orgasms",
     "value": 1
   },
   {
-    "text": "masochist",
-    "value": 1
-  },
-  {
-    "text": "damn",
-    "value": 1
-  },
-  {
-    "text": "rimming",
-    "value": 1
-  },
-  {
-    "text": "nigger",
+    "text": "whore",
     "value": 1
   },
   {
@@ -400,19 +320,11 @@
     "value": 1
   },
   {
-    "text": "wanky",
-    "value": 1
-  },
-  {
     "text": "blowjob",
     "value": 1
   },
   {
-    "text": "smut",
-    "value": 1
-  },
-  {
-    "text": "wang",
+    "text": "shithead",
     "value": 1
   }
 ]

@@ -18,7 +18,7 @@ const main = async () => {
     const puzzleUrls = listPuzzlesResponse.data.puzzles.map(({ url }) => url);
     console.log(`Number of puzzles found: ${puzzleUrls.length}`);
 
-    for await (const puzzleUrl of puzzleUrls) {
+    for (const puzzleUrl of puzzleUrls) {
       const config = {
         params: {
           puzzleUrl,

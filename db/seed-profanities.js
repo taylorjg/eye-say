@@ -9,11 +9,20 @@ const incrementWordCount = (map, word) => {
   map.set(word, count + 1);
 };
 
+const splitClueIntoWords = (clue) => {
+  return clue
+    .replace(/[^\w\s]/g, "")
+    .split(/\s/)
+    .map((s) => s.trim());
+};
+
 const findProfanitiesInClues = (map, clues) => {
+  const badwordsFiltered = badwords.filter((word) => !word.includes(" "));
   for (const clue of clues) {
-    for (const word of badwords) {
-      if (clue.includes(word)) {
-        incrementWordCount(map, word);
+    const wordsInClue = splitClueIntoWords(clue);
+    for (const badword of badwordsFiltered) {
+      if (wordsInClue.includes(badword)) {
+        incrementWordCount(map, badword);
       }
     }
   }
